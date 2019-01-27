@@ -339,7 +339,7 @@ class ParallaxScrollView extends Component {
 		return (
 			<View
 				ref={ref => (this._footerComponent = ref)}
-				style={{ backgroundColor: contentBackgroundColor }}
+				style={{ backgroundColor: contentBackgroundColor , height: this.props.footerHeight}}
 			/>
 		)
 	}
@@ -417,7 +417,8 @@ ParallaxScrollView.defaultProps = {
 	renderForeground: null,
 	stickyHeaderHeight: 0,
 	contentContainerStyle: null,
-	outputScaleValue: 5
+	outputScaleValue: 5,
+	footerHeight:0
 }
 
 module.exports = ParallaxScrollView
