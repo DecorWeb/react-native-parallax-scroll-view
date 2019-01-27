@@ -1,17 +1,9 @@
 import React, { Component } from 'react'
-import {
-  Animated,
-  Dimensions,
-  ScrollView,
-  View,
-  ViewPropTypes,
-} from 'react-native';
-
-import PropTypes from 'prop-types'
+import { Animated, Dimensions, ScrollView, View, ViewPropTypes } from 'react-native'
 
 const styles = require('./styles')
 
-const { bool, func, number, string } = PropTypes
+import { bool, func, number, string } from 'prop-types'
 
 const window = Dimensions.get('window')
 
@@ -347,7 +339,7 @@ class ParallaxScrollView extends Component {
 		return (
 			<View
 				ref={ref => (this._footerComponent = ref)}
-				style={{ backgroundColor: contentBackgroundColor, height: this.props.footerHeight }}
+				style={{ backgroundColor: contentBackgroundColor }}
 			/>
 		)
 	}
@@ -425,8 +417,7 @@ ParallaxScrollView.defaultProps = {
 	renderForeground: null,
 	stickyHeaderHeight: 0,
 	contentContainerStyle: null,
-	outputScaleValue: 5,
-	footerHeight:0
+	outputScaleValue: 5
 }
 
 module.exports = ParallaxScrollView
